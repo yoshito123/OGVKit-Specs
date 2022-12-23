@@ -94,7 +94,7 @@ Pod::Spec.new do |s|
 
   # Demuxer module subspecs
   s.subspec "OggDemuxer" do |soggdemuxer|
-    soggdemuxer.xcconfig = { 'OTHER_CFLAGS' => '-DOGVKIT_HAVE_OGG_DEMUXER' }
+    soggdemuxer.xcconfig = { 'OTHER_CFLAGS' => 'OGVKIT_HAVE_OGG_DEMUXER' }
     soggdemuxer.source_files = "Classes/OGVDecoderOgg.{h,m}",
                                "Classes/OGVDecoderOggPacket.{h,m}"
     soggdemuxer.private_header_files = "Classes/OGVDecoderOgg.h",
@@ -104,7 +104,7 @@ Pod::Spec.new do |s|
     soggdemuxer.dependency 'OGVKit/libskeleton', '~>0.4'
   end
   s.subspec "WebMDemuxer" do |swebmdemuxer|
-    swebmdemuxer.xcconfig = { 'OTHER_CFLAGS' => '-DOGVKIT_HAVE_WEBM_DEMUXER' }
+    swebmdemuxer.xcconfig = { 'OTHER_CFLAGS' => 'OGVKIT_HAVE_WEBM_DEMUXER' }
     swebmdemuxer.source_files = "Classes/OGVDecoderWebM.{h,m}",
                                 "Classes/OGVDecoderWebMPacket.{h,m}"
     swebmdemuxer.private_header_files = "Classes/OGVDecoderWebM.h",
@@ -115,19 +115,19 @@ Pod::Spec.new do |s|
 
   # Video decoder module subspecs
   s.subspec "TheoraDecoder" do |stheoradecoder|
-    stheoradecoder.xcconfig = { 'OTHER_CFLAGS' => '-DOGVKIT_HAVE_THEORA_DECODER' }
+    stheoradecoder.xcconfig = { 'OTHER_CFLAGS' => 'OGVKIT_HAVE_THEORA_DECODER' }
     stheoradecoder.dependency 'OGVKit/Core'
     stheoradecoder.dependency 'libtheora'
   end
   s.subspec "VP8Decoder" do |svp8decoder|
-    svp8decoder.xcconfig = { 'OTHER_CFLAGS' => '-DOGVKIT_HAVE_VP8_DECODER' }
+    svp8decoder.xcconfig = { 'OTHER_CFLAGS' => 'OGVKIT_HAVE_VP8_DECODER' }
     svp8decoder.dependency 'OGVKit/Core'
     svp8decoder.dependency 'libvpx', '~>1.5.0-1021-g59ae167'
   end
 
   # Audio decoder module subspecs
   s.subspec "VorbisDecoder" do |svorbisdecoder|
-    svorbisdecoder.xcconfig = { 'OTHER_CFLAGS' => '-DOGVKIT_HAVE_VORBIS_DECODER' }
+    svorbisdecoder.xcconfig = { 'OTHER_CFLAGS' => 'OGVKIT_HAVE_VORBIS_DECODER' }
     svorbisdecoder.dependency 'OGVKit/Core'
     svorbisdecoder.dependency 'libvorbis'
   end
