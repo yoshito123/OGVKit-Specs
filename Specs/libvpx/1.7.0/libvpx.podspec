@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   ver = "1.7.0"
-  sha1 = "84edd15ba083589b9c4dbaeb5aec633328f21a1f"
+  #sha1 = "84edd15ba083589b9c4dbaeb5aec633328f21a1f"
 
   s.name         = "libvpx"
   s.version      = ver
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
 
   s.source       = { :http => "https://github.com/yoshito123/VPX-iOS/releases/download/" + ver + "/VPX-iOS.zip",
-                     :sha1 => sha1,
+                     #:sha1 => sha1,
                      :flatten => true }
 
   s.vendored_frameworks = "VPX.framework"
